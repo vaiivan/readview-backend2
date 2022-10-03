@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+    backend:
+        environment: 
+            DB_USERNAME: sherrysnow
+            DB_PASSWORD: sherrymeow
+            DB_NAME: bookview
+            DB_HOST: postgres
+            NODE_ENV: production
+            PORT: 8888
+        depends_on: 
+            - postgres
+        build:
+            context: ./
+            dockerfile: ./Dockerfile
+        image: "readviewbackend:latest"
+        ports:
+            - "8888:8888"
+
+    postgres:
+        image: "postgres:13"
+        environment:
+            POSTGRES_USER: sherrysnow
+            POSTGRES_PASSWORD: sherrymeow
+            POSTGRES_DB: bookview
+        ports:
+            - "5432:5432"
+        volumes:
+            - ./pgdata:/var/lib/postgresql/data

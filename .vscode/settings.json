@@ -1,0 +1,24 @@
+{
+  "sqltools.connections": [
+    {
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 5432,
+      "driver": "PostgreSQL",
+      "name": "readview",
+      "database": "bookview",
+      "username": "sherrysnow",
+      "password": "sherrymeow"
+    },
+    {
+      "previewLimit": 50,
+      "server": "34.124.159.12",
+      "port": 5432,
+      "driver": "PostgreSQL",
+      "name": "postgres",
+      "database": "bookview",
+      "username": "sherrysnow",
+      "password": "sherrymeow"
+    }
+  ]
+}
